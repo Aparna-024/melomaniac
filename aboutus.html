@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AboutUs</title>
+    <link
+      rel="icon"
+      href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAACXBIWXMAAAsTAAALEwEAmpwYAAABhUlEQVR4nJXSzyvDcRzH8YmT+AOUOy0H5eLmJjEj9SWUXyVlmx9pWGqpjYMxjORnhIQlPyOkdiC+fm3z42Btkaa1HCRH1lOfltvMvOtz+zw+79f73Ueh+EdJEvFVZhz1FnwqPbb/WEW1ic1NJ6EDL9T344kZKiWSGq0ED72wKPOlamcpZljXy6P9AiQjrvxWpsQIf8IsFYm1Zh5XZCg2cJamJvnXyzk5JDT2sWUYJ1Bjwv7TsaiDY5EgaqfaHmbOH8Dlh2YbxACJy5RQ5jZTZpzm3e2HlpEw1A3D7jX5EVmejlSdFf/CIaH9Kzj1wPYVrF1C0zDIT+B8YSAi1lhw+17hNgDrMmjHQDMEG3IY7l7zVdLJaETcNcnHXRDcAZh3gGkZ2ibg6B40A9wXtGEWS4yMJwgK2D0He25YdMD6BayeEMquoTDqdtV6BvdcfLpewDgLTn84xcgGbxnlpEfFIpJk4Eg8IJA4l89QYUSOCn9KfLWidqxaKzcNFrylXexkVZLyF/wG6yUyL4rOmI4AAAAASUVORK5CYII="
+      type="image/icon type"
+    />
+    <!--font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overlock:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"
+    />
+    <link href="hamburgers.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="nav-bar">
+        <!-- <a href="#" class="toggle-button">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </a> -->
+        <button
+          class="hamburger hamburger--arrow toggle-button"
+          id="my-hamburger"
+          type="button"
+        >
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
+        <ul class="nav-bar-contents | aa-fl-dir-row">
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="#" class="active_color">ABOUT US</a></li>
+          <li><a href="register.html">REGISTER/SIGNUP</a></li>
+          <li><a href="login.html">LOGIN</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+      </div>
+
+      <div class="main-banner">
+        <!-- bg -->
+        <div class="banner-hp">
+          <h1>
+            Melomaniac
+            <img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEO0lEQVR4nO2aS4gcZRDHP/H92ERDIsZzvIheFMFgCCasehAPuniTeDAgKPhIDgbjCxaTFTyYi5AEDy56EfRgDAiCRE/qZn2gixfBS9RFWcwmcXWnqvonn1PDju1OZ6e7Z7en7R/0Ybq//uqrf1dVV/d0CA0NDQ0NDUMHcBFwE7ALeA34FPgVmAXGgYtDXQAuAW4BdgOvA58BC2TzahhGgMuB24HHgKPANLDYw8kfgHeAfcA9wCZgpx/7LVQdYATYDjwJvAl8C8gyjhrwPfA2sBfYAVydMe8/hCoBrAe2ubOTwIw7lkb82KSPHQWu6dPW2gtA2+H9wLvAjz1C+C9gCjgMPArcBlxWgu1KCHBFKpwXU1d2WxnOVlaAiBenh4AbgQtDQeKtzQvk414kN1dagKIAG4B7zeyAmX1iZgtJktDZzOwMsDV9Xud4GDaALbGxMbMjZvadmSUphxPff9TMPvR9U0MpAEvhvMfM3jOz2W5n3bkFv/IHYiR03w1i/fAxMhQC0L7nj5rZS2b2UTqc3ZlZMzsGPONF8tKsOXs5WgkBgKtiAfRwnskI58Pez2/p10ZlBQBuTod0Vzi/nA7nvFRWADM74U5/ATztuV7601mVBfgzLiB2g4O0U1kBklVawP9OANrvBbZ6J/hI7QVgBbfOWgkA3AA8fJ5b50x3Jzi0ApCvE9yQ7gSHRgDydYKZj8uVF4ClB5uscD4Sw75WnWCyTKEys5aZnTSzQ8CDwMay7ISqkSw5HTvBPavdCa45ZhadX7NOsDIChJrY6ZtGAGsigCYFrKkB1KXW9E1TA6ypARQNzdgqq+rzqjqtqvNrGWl9U3RhIvKAqs515uk1Vy0FEJExVVWf4w3gVuDKsu0MFMu5MOC6zpVX1acGZacQwPVmNqGq36jquTIXpqov+rkfdL0EfQX4GfgJmIj7itrJjaruUtU/BpWbqvpVPE9Edsbf7nCaiaJ2cjtv7dCMb3Im/fV0qbmpqmf9MXok/vYrn+aXonb6BtjcufKquvt84wsIMO8CrHO7MezTnPJj6309p8OgMbOD7tRbg8zNWFc8BUYzUuBgPBbHuADT5Xq7DF7waLVad6wkN+PYuIU+icXVxXu/S+gJF/lfQpvZcRfghTBoRORsdKiT81m5CVwQx4pIkucOIyJzLuCzvcap6n63MQdcGwaNiJxxAUZWkJsbfXG5PlUVkfuieC7CMRG5K9aE+GVoDHtVPe7zq4jcH1YDVf3aje5YQW6O+eJP5LXnInQi4T9bPBbtlOljJiIy7sYzczN+C6iqn/vYJ0IBvCvcp6pfisjvInJaVU+q6nPxo+gic+dZzCYRmc/KzZj7InLIr9Cp+KVoqBMiMiYi1okEEbnT/+9bJyJ3q+rH7vxiq9XaHuqItEWYz8jN2U6dqC2002Hcc/Nc3FR1KqbGoP8JamhoaGhoCKXyN4xtxh6c8Hc+AAAAAElFTkSuQmCC"
+              alt="double-note"
+              class="double-note"
+            />
+          </h1>
+          <p>
+            “Music was my refuge. I could crawl into the space between the notes
+            and curl my back to loneliness.” – Maya Angelou
+          </p>
+          <p>
+            Melomaniac is all about your feelings towards music.<br />Express
+            your opinions and ideas in here.
+          </p>
+        </div>
+      </div>
+      <div class="aboutus-section | aa-fl-dir-row">
+        <div class="aboutus-left">
+          <div class="aboutus-img">
+            <img
+              src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80"
+              alt="quote"
+              class="abt-img"
+            />
+          </div>
+          <div class="aboutus-img">
+            <img
+              src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+              alt="dj"
+              class="abt-img"
+            />
+          </div>
+          <div class="aboutus-img">
+            <img
+              src="https://www.sosorganize.com/wp-content/uploads/2021/02/pexels-andrea-piacquadio-3790797-800x550.jpg"
+              alt="listening"
+              class="abt-img"
+            />
+          </div>
+          <div class="aboutus-img">
+            <img
+              src="https://images.unsplash.com/photo-1652422485395-5282f45641bb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+              alt="notes"
+              class="abt-img"
+            />
+          </div>
+        </div>
+        <div class="aboutus-right">
+          <h1>About Us</h1>
+          <p>
+            Melomaniac provides a platform to share views on music through
+            words. Listening to Music is an inexplainable feeling each and
+            everyone have different thoughts on a same song,tune or note.
+          </p>
+          <p>
+            In melomaniac, find and meet people around the world with no
+            barriers. Here one can express any thoughts, opinions, suggestions
+            on the music of your preference. Turn your discussions into a whole
+            new world. Music can be healing to someone ...enjoyment to
+            another..a companion or comfort to some other. So for all music
+            lovers melomaniac is the platform for you.
+          </p>
+          <a href="register.html"
+            ><button id="abtus-signup-btn">Register/Signup</button></a
+          >
+        </div>
+      </div>
+
+      <div class="footer">
+        <div class="footer_sec | aa-fl-dir-col">
+          <a href="#"
+            ><img
+              class="footer-icon"
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAABGklEQVR4nO2VPW7CQBCFXeYMEUlLCwVn4ATcKB1SpEikRbQgJKS0aUILDQchFgR23hsk5GgNJObH9po1HSNNs56db+bNrjcI7lbUROQJiqEQP1BGLr6LxYhkNT858e2aGKdOhDZHKsBWXqBqFWImyk8QUyHWu28YpHfgKgs5FpHno+KIyR68zOjAqfKVMebxbO8eYN0LAPLrEL9WrYviw8pkKy8L0EvM7PVSjKdE7P7NTPFWIgAvotoym00jIVHNrsXuLRHQTNsXRdGDENubAUhWvSUSYhXfVGXnPx7teO3k/pQ3ZPL9tqeIBQEuvwrJAQixyOgAI+8OiH6QeRqI8GoAOTfGVFIBiQdnkLw4yAHEsUQ/N/ndggv2C29nIlT3KhMvAAAAAElFTkSuQmCC"
+            />facebook</a
+          >
+          <a href="#"
+            ><img
+              class="footer-icon"
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAABQElEQVR4nO1UXUoDQQwu1qOoF5D6dwXZ7QHUnkHrQ6tgT1EVWj1YBVn0DpP5ErAjWVJYhsLO7IP40MAH2cxMvvxs0uvt5N9KCGHfiZwR84iAewImEcbEfONETkII/SznJHLhmb89c0gBMVdO5DQ58lTnBKyJeWUknyGEvVYCLUtG5Ks6Y+YP/XYix+3lYR5tifSHgAWAEkChutqMpHZu+lU7ATCOnQO41DMAhwrTiw3JBg64TSF4jAgWZn9t2J7N9hbdnaYQzJqPABQAjuKyWTbDiOCpC0GZQTDrUqKl2V8azZyb7T26+9C1yYWeadTe+wPTS52D/CZv/03X2lAtiUIjj51bZtetBDryqYPmIziRQeqq+Mp1TsxV8tIjkfMcEmKu9E2S80YmfV3FWlcH3NmKnhomtU3PRAbZ63onfyq/PEZdhEGJ0BIAAAAASUVORK5CYII="
+            />instagram</a
+          >
+          <a href="#"
+            ><img
+              class="footer-icon"
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAABu0lEQVR4nOWUvWtTYRTGo+Kkiw6CVCoFJzdxEcWlgrbgUEQcRFzr4uLiIIougkOXLgouuvQPaIdOOrg71KEZdGltoYsl4eY9z/O8Ro/cmIR83OTeNJn0hTNc7jnP73C+SqV/4rn74RH9j0N6btJXIwVpx8jXIYQzLR+S52u12unGB6QlALNFxCvuJ43cgOR9Rv6A9MKkDyA/ufuhFuC7kQmAuTwAyJVM8Q4zqUxyPpALjSAj0fhB1o185u5Hs8STJDll5K9cAPkT0q6ZTf8FSOWeDDYDedvdj3RlD1zLE2/Fm9nZdqCRTwY475i0HMhbAM4BuFEIQD7tnYpjID8XCUYRi/FBF8Ckbyatpj2YBCC0mtsB+Dix7CXvqn8DEOMVI39PRFwqZ863kY8nBHmVCUhnn+RNI78cOHuSIYSpTEDF/YSR1bHKQ77JFG8vUoyLY5RpK01yKKA5UffS2zRi5nWL8WqueGc/TLpvZCggrvSsFBYPMV4E+a55sDxHvArg+vCSxHjZyLcmrUPaG2He1/oWatADMAPpJaTtocLkPsj3IcZLhUuSBTPpDoCHzeV7ZNLdmnSh93z/H+8PuJrYrAzDOGUAAAAASUVORK5CYII="
+            />twitter</a
+          >
+
+          <a href="mailto: example123@gmail.com">melomaniac@gmail.com</a>
+          <p>Copyright 2023 &#169; Melomaniac All Rights Reserved</p>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.4.min.js"
+      integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+    <!-- <script>
+      $(".aboutus-left").slick();
+    </script> -->
+    <script>
+      $(".aboutus-left").slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: false,
+        autoplaySpeed: 1500,
+      });
+    </script>
+    <!-- nav-bar toggle  -->
+    <script>
+      const toggleButton = document.getElementsByClassName("toggle-button")[0];
+
+      const navbarLinks =
+        document.getElementsByClassName("nav-bar-contents")[0];
+
+      toggleButton.addEventListener("click", () => {
+        navbarLinks.classList.toggle("active");
+      });
+    </script>
+    <!-- nav-bar toggle  -->
+    <!-- <script>
+      function myfunction() {
+        window.location.href = "register.html";
+      }
+    </script> -->
+    <script>
+      // Look for .hamburger
+      var hamburger = document.querySelector(".hamburger");
+      // On click
+      hamburger.addEventListener("click", function () {
+        // Toggle class "is-active"
+        hamburger.classList.toggle("is-active");
+        // Do something else, like open/close menu
+      });
+    </script>
+  </body>
+</html>

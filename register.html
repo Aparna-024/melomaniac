@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <link
+      rel="icon"
+      href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAACXBIWXMAAAsTAAALEwEAmpwYAAABhUlEQVR4nJXSzyvDcRzH8YmT+AOUOy0H5eLmJjEj9SWUXyVlmx9pWGqpjYMxjORnhIQlPyOkdiC+fm3z42Btkaa1HCRH1lOfltvMvOtz+zw+79f73Ueh+EdJEvFVZhz1FnwqPbb/WEW1ic1NJ6EDL9T344kZKiWSGq0ED72wKPOlamcpZljXy6P9AiQjrvxWpsQIf8IsFYm1Zh5XZCg2cJamJvnXyzk5JDT2sWUYJ1Bjwv7TsaiDY5EgaqfaHmbOH8Dlh2YbxACJy5RQ5jZTZpzm3e2HlpEw1A3D7jX5EVmejlSdFf/CIaH9Kzj1wPYVrF1C0zDIT+B8YSAi1lhw+17hNgDrMmjHQDMEG3IY7l7zVdLJaETcNcnHXRDcAZh3gGkZ2ibg6B40A9wXtGEWS4yMJwgK2D0He25YdMD6BayeEMquoTDqdtV6BvdcfLpewDgLTn84xcgGbxnlpEfFIpJk4Eg8IJA4l89QYUSOCn9KfLWidqxaKzcNFrylXexkVZLyF/wG6yUyL4rOmI4AAAAASUVORK5CYII="
+      type="image/icon type"
+    />
+    <!--font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overlock:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+    <link href="hamburgers.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="nav-bar">
+        <!-- <a href="#" class="toggle-button">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </a> -->
+        <button
+          class="hamburger hamburger--arrow toggle-button"
+          id="my-hamburger"
+          type="button"
+        >
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
+        <ul class="nav-bar-contents | aa-fl-dir-row">
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="aboutus.html">ABOUT US</a></li>
+          <li><a href="#" class="active_color">REGISTER/SIGNUP</a></li>
+          <li><a href="login.html">LOGIN</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+      </div>
+      <div class="register-section">
+        <form class="register-melo | details-section | aa-fl-dir-col">
+          <h1>
+            Sign-Up<img
+              src="data:image/png;base64,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"
+              alt="guitar"
+              class="logo-icon"
+            />
+          </h1>
+
+          <label for="fname">First Name </label>
+
+          <input type="text" placeholder="First name" id="fname" />
+          <label for="lname">Last Name </label>
+          <input type="text" placeholder="Last name" id="lname" />
+          <label for="email">Email </label>
+          <input type="email" name="email" id="email" placeholder="Email-id" />
+
+          <label for="unique-user">Username</label>
+          <input
+            type="text"
+            placeholder="Create a username that is unique."
+            id="unique-user"
+          />
+          <label for="password"> Password </label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Password"
+          />
+          <input type="submit" value="Register" id="register-btn" />
+        </form>
+      </div>
+
+      <div class="footer">
+        <div class="footer_sec | aa-fl-dir-col">
+          <a href="#"
+            ><img
+              class="footer-icon"
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAABGklEQVR4nO2VPW7CQBCFXeYMEUlLCwVn4ATcKB1SpEikRbQgJKS0aUILDQchFgR23hsk5GgNJObH9po1HSNNs56db+bNrjcI7lbUROQJiqEQP1BGLr6LxYhkNT858e2aGKdOhDZHKsBWXqBqFWImyk8QUyHWu28YpHfgKgs5FpHno+KIyR68zOjAqfKVMebxbO8eYN0LAPLrEL9WrYviw8pkKy8L0EvM7PVSjKdE7P7NTPFWIgAvotoym00jIVHNrsXuLRHQTNsXRdGDENubAUhWvSUSYhXfVGXnPx7teO3k/pQ3ZPL9tqeIBQEuvwrJAQixyOgAI+8OiH6QeRqI8GoAOTfGVFIBiQdnkLw4yAHEsUQ/N/ndggv2C29nIlT3KhMvAAAAAElFTkSuQmCC"
+            />facebook</a
+          >
+          <a href="#"
+            ><img
+              class="footer-icon"
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAABQElEQVR4nO1UXUoDQQwu1qOoF5D6dwXZ7QHUnkHrQ6tgT1EVWj1YBVn0DpP5ErAjWVJYhsLO7IP40MAH2cxMvvxs0uvt5N9KCGHfiZwR84iAewImEcbEfONETkII/SznJHLhmb89c0gBMVdO5DQ58lTnBKyJeWUknyGEvVYCLUtG5Ks6Y+YP/XYix+3lYR5tifSHgAWAEkChutqMpHZu+lU7ATCOnQO41DMAhwrTiw3JBg64TSF4jAgWZn9t2J7N9hbdnaYQzJqPABQAjuKyWTbDiOCpC0GZQTDrUqKl2V8azZyb7T26+9C1yYWeadTe+wPTS52D/CZv/03X2lAtiUIjj51bZtetBDryqYPmIziRQeqq+Mp1TsxV8tIjkfMcEmKu9E2S80YmfV3FWlcH3NmKnhomtU3PRAbZ63onfyq/PEZdhEGJ0BIAAAAASUVORK5CYII="
+            />instagram</a
+          >
+          <a href="#"
+            ><img
+              class="footer-icon"
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAABu0lEQVR4nOWUvWtTYRTGo+Kkiw6CVCoFJzdxEcWlgrbgUEQcRFzr4uLiIIougkOXLgouuvQPaIdOOrg71KEZdGltoYsl4eY9z/O8Ro/cmIR83OTeNJn0hTNc7jnP73C+SqV/4rn74RH9j0N6btJXIwVpx8jXIYQzLR+S52u12unGB6QlALNFxCvuJ43cgOR9Rv6A9MKkDyA/ufuhFuC7kQmAuTwAyJVM8Q4zqUxyPpALjSAj0fhB1o185u5Hs8STJDll5K9cAPkT0q6ZTf8FSOWeDDYDedvdj3RlD1zLE2/Fm9nZdqCRTwY475i0HMhbAM4BuFEIQD7tnYpjID8XCUYRi/FBF8Ckbyatpj2YBCC0mtsB+Dix7CXvqn8DEOMVI39PRFwqZ863kY8nBHmVCUhnn+RNI78cOHuSIYSpTEDF/YSR1bHKQ77JFG8vUoyLY5RpK01yKKA5UffS2zRi5nWL8WqueGc/TLpvZCggrvSsFBYPMV4E+a55sDxHvArg+vCSxHjZyLcmrUPaG2He1/oWatADMAPpJaTtocLkPsj3IcZLhUuSBTPpDoCHzeV7ZNLdmnSh93z/H+8PuJrYrAzDOGUAAAAASUVORK5CYII="
+            />twitter</a
+          >
+
+          <a href="mailto: example123@gmail.com">melomaniac@gmail.com</a>
+          <p>Copyright 2023 &#169; Melomaniac All Rights Reserved</p>
+        </div>
+      </div>
+    </div>
+    <!-- nav-bar toggle  -->
+    <script>
+      const toggleButton = document.getElementsByClassName("toggle-button")[0];
+
+      const navbarLinks =
+        document.getElementsByClassName("nav-bar-contents")[0];
+
+      toggleButton.addEventListener("click", () => {
+        navbarLinks.classList.toggle("active");
+      });
+    </script>
+    <!-- nav-bar toggle  -->
+    <script>
+      // Look for .hamburger
+      var hamburger = document.querySelector(".hamburger");
+      // On click
+      hamburger.addEventListener("click", function () {
+        // Toggle class "is-active"
+        hamburger.classList.toggle("is-active");
+        // Do something else, like open/close menu
+      });
+    </script>
+  </body>
+</html>
